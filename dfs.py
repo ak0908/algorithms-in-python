@@ -30,6 +30,13 @@ class Graph:
         res.sort()
         return res
 
+    def graph_transpose(self):
+        g = Graph()
+
+        for i in self.adj:
+            for j in self.adj[i]:
+                g.add_edge(j, i)
+
     
 def dfs(g):
     results = DFSResult()
